@@ -25,6 +25,30 @@ public static String zipZap(String str) {
   return zapStr;
 }
 
+  // file IO - Read 1
+  public static String longestWord(String filenametxt) throws FileNotFoundException {
+
+    // declare variables
+    String longestWord = "";
+    String current;
+
+    // scan files
+    File theFile = new File(filenametxt);
+    Scanner scan = new Scanner(theFile);
+
+    // determine longest word in the file
+    while (scan.hasNext()) {
+        current = scan.next();
+        if (current.length() >= longestWord.length()) {
+            longestWord = current;
+        }
+    }
+    scan.close();
+
+    // return the longest word
+    return longestWord;
+    }
+
   // Arrays 1 - One Dimensional
   public static int[] tenRun(int[] nums) {
 
@@ -79,5 +103,6 @@ public static boolean linearIn(int[] outer, int[] inner) {
   // if nothing is found, return false
   return false;
 }
+
 
 }
