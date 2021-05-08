@@ -50,3 +50,34 @@ public static String zipZap(String str) {
     return nums; 
 }
 
+// Array 3 - One Dimensional - Two Loops
+public static boolean linearIn(int[] outer, int[] inner) {
+
+  // declare variables
+  int numFound = 0;
+  int k = 0;
+
+  // if the length of the inner array is 0, it will always return true
+  if(inner.length == 0) {
+     return true;
+  }
+  
+  // determine if the integers in the outer array are present in the inner array. 
+  // if they are the present, return true. otherwise return false. 
+  for(int i = 0; i < outer.length; i++) {
+     if(outer[i] == inner[k]) {
+        numFound++;
+        k++;
+     } else if(outer[i] > inner[k]) {
+        return false;
+     }
+     
+     if(numFound == inner.length)
+        return true;
+  }
+
+  // if nothing is found, return false
+  return false;
+}
+
+}
