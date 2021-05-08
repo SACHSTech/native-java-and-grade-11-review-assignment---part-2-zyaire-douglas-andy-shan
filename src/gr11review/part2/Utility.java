@@ -24,4 +24,29 @@ public static String zipZap(String str) {
   // return the zapped string
   return zapStr;
 }
+
+  // Arrays 1 - One Dimensional
+  public static int[] tenRun(int[] nums) {
+
+    // declare variables
+    int current;
+    int i = 0;
+      
+    // determine if num is a mulitple of 10 and replace all other nums after until finding a num that is a greater multiple of 10
+    while(i < nums.length && nums[i] % 10 != 0)
+        i++;
+     if(i >= nums.length)
+        return nums;                
+    current = nums[i]; 
+    i++;
+                                
+    while(i < nums.length) {
+        if(nums[i] % 10 == 0)
+            current = nums[i];
+        else
+            nums[i] = current;
+        i++;
+    }
+    return nums; 
 }
+
