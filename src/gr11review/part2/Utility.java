@@ -104,5 +104,41 @@ public static boolean linearIn(int[] outer, int[] inner) {
   return false;
 }
 
+// Array 5 - Two Dimensional
+public static void pascalTri(int i, int j) throws IOException {
 
+  // declare variables
+  int[][] num;
+
+  // determine the numbers in the Pascal triangle
+  num = new int[i][j];
+  for (int countH = 0; countH < i; countH++) {
+    for (int countV = 0; countV < j; countV++) {
+      if (countV == 0 || countH == 0) {
+        num[countH][countV] = 1;
+      }
+       else {
+        num[countH][countV] = num[countH][countV - 1] + num[countH - 1][countV];
+      }
+    }
+  }
+
+  // display the numbers in pascalOut.textFile
+   BufferedWriter myWriter = null;
+   myWriter = new BufferedWriter(new FileWriter("src/gr11review/part2/pascalOut.txt"));
+   for (int countH = 0; countH < i; countH++) {
+     for (int countV = 0; countV <= j; countV++) {
+       if (countV == j) {
+         myWriter.write("\n");
+       }
+       else {
+         myWriter.write(num[countH][countV] + "");
+         if (countV < j - 1) {
+           myWriter.write(",");
+         }
+       }
+     }
+   }
+   myWriter.close();
+}
 }
