@@ -56,7 +56,24 @@ public class Utility {
   }
 
   public static boolean canBalance(int[] nums){//array 4
-    
+    int ls = 0;//initialize the values
+    int rs = 0;
+    int count;
+    int countTwo;
+    for(count = 0; count < nums.length; count++){//here is the loop
+      ls += nums[count];//adding the left side
+      rs = 0;//reset because it will be so big
+      for(countTwo = nums.length-1; countTwo > count; countTwo--){//adding the right side
+        rs += nums[countTwo]; 
+      }
+      if(ls == rs){//check if correct
+        return true;
+      }
+    }
+    return false;
+  }
 
+  public static void diagonal(int n){
+    
   }
 }

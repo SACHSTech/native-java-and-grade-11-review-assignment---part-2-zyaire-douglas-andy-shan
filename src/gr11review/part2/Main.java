@@ -20,6 +20,12 @@ public class Main{
     int value = 2;
     int[] nums = {1, 2, 3, 2, 5, 2};
     int[] newAry = Utility.notAlone(nums, value);
-    System.out.println(newAry);
+    for(int i = 0; i < newAry.length; i++){
+      System.out.print(newAry[i] + ", ");
+    }
+
+    //array 4
+    int[] ary = {1, 1, 1, 2, 1};
+    System.out.print(Utility.canBalance(ary));
   }
 }
