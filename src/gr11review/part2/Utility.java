@@ -201,9 +201,6 @@ public static boolean linearIn(int[] outer, int[] inner) {// Array 3 - One Dimen
   
 /**
 * This program adds values top and left in a 2D array to get the value of the next spot on a table
-
-/**
-* This program determines if numbers in the inner array are present in those in the outer array
 * @author: Douglas, Lau
 */
 public static void pascalTri(int i, int j) throws IOException {// Array 5 - Two Dimensional
