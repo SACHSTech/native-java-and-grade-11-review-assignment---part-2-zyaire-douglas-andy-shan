@@ -55,13 +55,12 @@ public static String zipZap(String str) {// Methods 1
   * This is a program that finds the longest word in a file, and returns the longest word
   * @author: Douglas Lau
   */
-  public static String longestWord(String filenametxt) throws IOException {// fileIO 1
-
+  public static String longestWord(String filenametxt) throws IOException {// file IO - Read 1
     // declare variables
     String longestWord = "";
     String current;
 
-    // scan files
+    // read files
     File theFile = new File(filenametxt);
     BufferedReader br = new BufferedReader(new FileReader(theFile));
 
@@ -131,7 +130,6 @@ public static String zipZap(String str) {// Methods 1
   public static int[] notAlone(int[] nums, int value){//array 2 not alone
     int count;
     int aryLength = nums.length;//get the length for the loop
-
     for(count = 1; count < aryLength - 1; count++){//go over the array
       if(nums[count] == value){//to check if the number in the spot is the value we want, if yes, check if the left and right are equal to value
         if(nums[count - 1] != nums[count] && nums[count + 1] != nums[count]){//here we go
@@ -203,6 +201,9 @@ public static boolean linearIn(int[] outer, int[] inner) {// Array 3 - One Dimen
   
 /**
 * This program adds values top and left in a 2D array to get the value of the next spot on a table
+
+/**
+* This program determines if numbers in the inner array are present in those in the outer array
 * @author: Douglas, Lau
 */
 public static void pascalTri(int i, int j) throws IOException {// Array 5 - Two Dimensional
