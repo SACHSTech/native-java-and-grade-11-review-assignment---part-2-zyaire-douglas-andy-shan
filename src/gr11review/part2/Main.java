@@ -5,9 +5,14 @@ public class Main{
     BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 	  String input;
 	  int result = 0;
-	  input = keyboard.readLine();
-	  result = sumNumbers(input);
+    System.out.println("Give me a string");
+	  input = key.readLine();
+	  result = Utility.sumNumbers(input);
 	  System.out.println(result);
-		//sumNeumbers("abc123xyz") → 123
+
+    String test;
+    test = Utility.alphaWord("src/gr11review/part2/FileIO2.txt"); 
+
+    System.out.println("The word that is alphabetically first is " + test); 
   }
 }
