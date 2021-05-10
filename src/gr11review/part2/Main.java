@@ -2,6 +2,7 @@ package gr11review.part2;
 import java.io.*;
 public class Main{
   public static void main (String[] args) throws IOException{
+    
     //methods 2
     BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 	  String input;
@@ -10,7 +11,7 @@ public class Main{
 	  input = key.readLine();
 	  result = Utility.sumNumbers(input);
 	  System.out.println(result);
-
+    
     //file io2
     String test;
     test = Utility.alphaWord("src/gr11review/part2/FileIO2.txt"); 
@@ -31,6 +32,19 @@ public class Main{
     //arrag 6
     int ntest = 3;
     Utility.diagonal(ntest);
+    
+     //douglas part
+     // use this area to test methods from Utility.java
+     // create objects
+     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
+     // declare variables
+     String str;
+
+     // ask for user input of words
+     str = keyboard.readLine();
+
+     // use method to zipZap words
+     System.out.print(Utility.zipZap(str));
   }
 }
