@@ -38,9 +38,24 @@ public class Utility {
   }
 
   public static int[] notAlone(int[] nums, int value){//array 2 not alone
-    int lengthAry = nums.length;
-    int[] ary =  new int[lengthAry];
+    int count;
+    int aryLength = nums.length;//get the length for the loop
 
+    for(count = 1; count < aryLength - 1; count++){//go over the array
+      if(nums[count] == value){//to check if the number in the spot is the value we want, if yes, check if the left and right are equal to value
+        if(nums[count - 1] != nums[count] && nums[count + 1] != nums[count]){//here we go
+          if(nums[count-1] > nums[count +1]){//if left > right, then the count spot number becomes it
+            nums[count] = nums[count-1];
+          }else if(nums[count - 1] < nums[count + 1]){//vice versa
+            nums[count] = nums[count + 1];
+          }
+        }
+      }
+    }
+    return nums;
+  }
+
+  public static boolean canBalance(int[] nums){//array 4
     
 
   }
