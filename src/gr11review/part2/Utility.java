@@ -4,8 +4,11 @@ import java.io.*;
 
 public class Utility {
 
-// Methods 1
-public static String zipZap(String str) {
+/** 
+* This is a program to take out the letter between letters "z" and "p" and returns the String with the removed letters
+* @author: Douglas, Lau
+*/
+public static String zipZap(String str) {// Methods 1
 
   // declare variables
   String zapStr = "";
@@ -24,8 +27,11 @@ public static String zipZap(String str) {
   return zapStr;
 }
 
-  // file IO - Read 1
-  public static String longestWord(String filenametxt) throws IOException {
+  /**
+  * This is a program that finds the longest word in a file, and returns the longest word
+  * @author: Douglas Lau
+  */
+  public static String longestWord(String filenametxt) throws IOException {// file IO - Read 1
 
     // declare variables
     String longestWord = "";
@@ -47,8 +53,11 @@ public static String zipZap(String str) {
     return longestWord;
     }
 
-  // Arrays 1 - One Dimensional
-  public static int[] tenRun(int[] nums) {
+  /**
+  * This program replaces all numbers to the next highest multiple of 10, and returns the changes numbers
+  * @author: Douglas Lau
+  */
+  public static int[] tenRun(int[] nums) {// Arrays 1 - One Dimensional
 
     // declare variables
     int current;
@@ -72,8 +81,11 @@ public static String zipZap(String str) {
     return nums; 
 }
 
-// Array 3 - One Dimensional - Two Loops
-public static boolean linearIn(int[] outer, int[] inner) {
+/**
+* This program determines if numbers in the inner array are present in those in the outer array
+* @author: Douglas, Lau
+*/
+public static boolean linearIn(int[] outer, int[] inner) {// Array 3 - One Dimensional - Two Loops
 
   // declare variables
   int numFound = 0;
@@ -102,8 +114,11 @@ public static boolean linearIn(int[] outer, int[] inner) {
   return false;
 }
 
-// Array 5 - Two Dimensional
-public static void pascalTri(int i, int j) throws IOException {
+/**
+* This program determines if numbers in the inner array are present in those in the outer array
+* @author: Douglas, Lau
+*/
+public static void pascalTri(int i, int j) throws IOException {// Array 5 - Two Dimensional
 
   // declare variables
   int[][] num;
