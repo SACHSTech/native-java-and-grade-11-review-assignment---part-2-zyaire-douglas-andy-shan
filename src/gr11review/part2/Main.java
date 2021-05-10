@@ -27,5 +27,10 @@ public class Main{
     //array 4
     int[] ary = {1, 1, 1, 2, 1};
     System.out.print(Utility.canBalance(ary));
+
+    //arrag 6
+    int ntest = 3;
+    Utility.diagonal(ntest);
+
   }
 }

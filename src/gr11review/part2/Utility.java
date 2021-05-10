@@ -1,6 +1,12 @@
 package gr11review.part2;
 import java.util.Scanner;
 import java.io.*;
+
+/**
+* This is a program to find and add all the numbers from the string
+* @author: Zyaire, Qu
+*/
+
 public class Utility {
   public static int sumNumbers(String str) {//method 2
     int sum = 0;
@@ -21,7 +27,10 @@ public class Utility {
     }
     return sum;//here we need to return it so that main branch could call it like hihi are u here
   }
-
+  /**
+  * This is a program to sort the words alphabetly from a file
+  * @author: Zyaire, Qu
+  */
   public static String alphaWord(String filenametxt) throws IOException{//file io2
     BufferedReader readf = new BufferedReader(new FileReader(filenametxt));
     String words = "";
@@ -36,7 +45,10 @@ public class Utility {
     readf.close();//close a file after read
     return compareOtp;
   }
-
+  /**
+  * This is a program that makes the letter no more alone 
+  * @author: Zyaire, Qu
+  */
   public static int[] notAlone(int[] nums, int value){//array 2 not alone
     int count;
     int aryLength = nums.length;//get the length for the loop
@@ -54,7 +66,10 @@ public class Utility {
     }
     return nums;
   }
-
+  /**
+  * This is a program to compare the value of left and side, if they are equal or not
+  * @author: Zyaire, Qu
+  */
   public static boolean canBalance(int[] nums){//array 4
     int ls = 0;//initialize the values
     int rs = 0;
@@ -72,8 +87,29 @@ public class Utility {
     }
     return false;
   }
-
-  public static void diagonal(int n){
-    
+  /**
+  * This is a program that prints a two dimentional array's diagonal
+  * @author: Zyaire, Qu
+  */
+  public static void diagonal(int n) throws IOException{
+    int count;
+    int countC;
+    PrintWriter output = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt", true));
+    for (count = 0; count < n; count++){ //loop the row
+      for (countC = 0; countC < n; countC++){ //loop the column
+        if (count + countC < n - 1){ //above the diagonal sicne row+colum<the number n
+          output.print("0");
+        }else if(count + countC == n - 1){ //row + column if that is euqals to the number n, that is diagonal
+          output.print("1");
+        }else{
+          output.print("2"); //vice versa 
+        }
+        if (countC != n - 1){ //here to include the comma, 
+          output.print(", ");
+        }
+      }
+      output.println(" ");//next row
+    }
+    output.close();//close the file
   }
 }
