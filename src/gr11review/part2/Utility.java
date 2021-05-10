@@ -1,7 +1,6 @@
 package gr11review.part2;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class Utility {
 
@@ -26,7 +25,7 @@ public static String zipZap(String str) {
 }
 
   // file IO - Read 1
-  public static String longestWord(String filenametxt) throws FileNotFoundException {
+  public static String longestWord(String filenametxt) throws IOException {
 
     // declare variables
     String longestWord = "";
@@ -34,16 +33,15 @@ public static String zipZap(String str) {
 
     // scan files
     File theFile = new File(filenametxt);
-    Scanner scan = new Scanner(theFile);
+    BufferedReader br = new BufferedReader(new FileReader(theFile));
 
     // determine longest word in the file
-    while (scan.hasNext()) {
-        current = scan.next();
+    while ((current = br.readLine()) != null) {
         if (current.length() >= longestWord.length()) {
             longestWord = current;
         }
     }
-    scan.close();
+    br.close();
 
     // return the longest word
     return longestWord;
