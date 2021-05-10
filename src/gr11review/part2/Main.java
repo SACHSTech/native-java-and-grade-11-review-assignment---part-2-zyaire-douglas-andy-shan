@@ -32,7 +32,6 @@ public class Main{
     //arrag 6
     int ntest = 3;
     Utility.diagonal(ntest);
-    
      //douglas part
      // use this area to test methods from Utility.java
      // create objects
