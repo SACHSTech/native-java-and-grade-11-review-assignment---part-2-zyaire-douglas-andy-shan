@@ -223,7 +223,7 @@ public static void pascalTri(int i, int j) throws IOException {// Array 5 - Two 
 
   // display the numbers in pascalOut.textFile
    BufferedWriter myWriter = null;
-   myWriter = new BufferedWriter(new FileWriter("src/gr11review/part2/pascalOut.txt"));
+   myWriter = new BufferedWriter(new FileWriter("pascalOut.txt"));
    for (int countH = 0; countH < i; countH++) {
      for (int countV = 0; countV <= j; countV++) {
        if (countV == j) {
