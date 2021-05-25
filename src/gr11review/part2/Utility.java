@@ -247,7 +247,8 @@ public static void pascalTri(int i, int j) throws IOException {// Array 5 - Two 
   public static void diagonal(int n) throws IOException{//array6
     int count;
     int countC;
-    PrintWriter output = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt", true));
+    //PrintWriter output = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt", true)); 
+    PrintWriter output = new PrintWriter(new FileWriter("diagonalOut.txt", true)); 
     for (count = 0; count < n; count++){ //loop the row
       for (countC = 0; countC < n; countC++){ //loop the column
         if (count + countC < n - 1){ //above the diagonal sicne row+colum<the number n
